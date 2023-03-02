@@ -3,11 +3,21 @@ require("hardhat-deploy");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.17",
-  defaultNetwork: "hardhat",
-  namedAccounts: {
-    deployer: {
-        default: 0, 
-        1: 0,
+    solidity: {
+        compilers: [
+            {
+                version: "0.8.17",
+            },
+            {
+                version: "0.6.6",
+            },
+        ],
     },
-}};
+    defaultNetwork: "hardhat",
+    namedAccounts: {
+        deployer: {
+            default: 0,
+            1: 0,
+        },
+    },
+};
